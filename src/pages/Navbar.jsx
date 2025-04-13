@@ -16,7 +16,7 @@ const Navbar = () => {
                 <button type="button" onClick={() => fetchImageByCategory("health")} className="btn btn-outline-warning mx-3">Health</button>
             </div>
             <div className='container text-center mt-4 ' style={{width:"800px"}}>
-                <input type="search" onChange={(e)=>setQuery(e.target.value)} className='form-control bg-dark text-light' />
+                <input type="search" onChange={(e)=>setQuery(e.target.value)} className='form-control bg-dark text-light mt-3 mb-3' />
             </div>
         </div>
     )
