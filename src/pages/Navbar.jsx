@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import PixabayContext from '../components/PixabayContext'
 
 const Navbar = () => {
-    const {fetchImageByCategory} = useContext(PixabayContext)
+    const {fetchImageByCategory, setQuery} = useContext(PixabayContext)
     return (
         <div>
             <div className="container my-3 text-center">
@@ -15,8 +15,8 @@ const Navbar = () => {
                 <button type="button" onClick={() => fetchImageByCategory("computer")} className="btn btn-outline-light mx-3">Computer</button>
                 <button type="button" onClick={() => fetchImageByCategory("health")} className="btn btn-outline-warning mx-3">Health</button>
             </div>
-            <div className='container text-center '>
-                <input type="search" />
+            <div className='container text-center style={{width:"800px"}}'>
+                <input type="search" className="form-control bg-dark text-light" onChange={(e)=>setQuery(e.target.value)}/>
             </div>
         </div>
     )
