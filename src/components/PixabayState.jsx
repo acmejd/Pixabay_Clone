@@ -26,12 +26,12 @@ const PixabayState = (props) => {
     setImageData(data.hits)
   }
 
-  // const fetchBySearch = async () => {
-    // const api = await fetch(`https://pixabay.com/api/?key=${api_key}&category=${cat}&image_type=photo&pretty=true&per_page=100`)
-    // const data = await api.json()
-    // console.log(data)
-    // setImageData(data.hits)
-  // }
+  const fetchBySearch = async () => {
+    const api = await fetch(`https://pixabay.com/api/?key=${api_key}&category=${cat}&image_type=photo&pretty=true&per_page=100`)
+    const data = await api.json()
+    console.log(data)
+    setImageData(data.hits)
+  }
 
   return (
     <>
