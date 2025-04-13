@@ -5,7 +5,7 @@ const Home = () => {
     console.log(useContext(PixabayContext))
     const { imageData } = useContext(PixabayContext)
     return (
-        <div className="container">
+        <div className="container mt-4">
             <div className='flex my-3'>
                 {imageData.map((image) => <div key={image.id}>
                     <div className="items">
